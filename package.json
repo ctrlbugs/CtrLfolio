@@ -1,0 +1,19 @@
+{
+  "name": "myportfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ctrlbugs/Myportfolio.git"
+  },
+  "author": "CtrLBugs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ctrlbugs/Myportfolio/issues"
+  },
+  "homepage": "https://github.com/ctrlbugs/Myportfolio#readme"
+}
