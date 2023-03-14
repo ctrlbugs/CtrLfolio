@@ -20,7 +20,7 @@ body{
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url("https://github.com/ctrlbugs/Myportfolio/blob/main/files/icons/background.png");
+    background-image: url("https://github.com/ctrlbugs/Myportfolio/blob/main/files/icons/background.png?raw=true");
     background-size: cover;
     background-position: center;
 }
@@ -465,7 +465,7 @@ nav .fas {
 @media only screen and (max-width: 600px) {
   /* Set the background image for the header */
   #header {
-    background-image: url(https://github.com/ctrlbugs/Myportfolio/blob/main/files/icons/phone-background.png);
+    background-image: url(https://github.com/ctrlbugs/Myportfolio/blob/main/files/icons/phone-background.png?raw=true);
   }
 
   /* Adjust the font size and margin for the header text */
