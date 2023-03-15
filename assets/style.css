@@ -16,11 +16,11 @@ body{
     background-color: #000;
     color: #fff;
 }
-
+/*------------------header------------------*/
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url("./images/background.png");
+    background-image: url("https://www.dropbox.com/s/felir35k7qdj8z6/background.png?raw=1");
     background-size: cover;
     background-position: center;
 }
@@ -72,14 +72,13 @@ nav ul li a:hover::after{
 }
 .header-text{
   display: inline-block;
-  margin: 60px;
   font-size: 30px;
   vertical-align: middle;
 }
 
 .header-text h1{
   font-size: 60px;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 .color-pink {
   color: #4657AF
@@ -93,10 +92,11 @@ nav ul li a:hover::after{
   position: relative;
   font-size: 100%;
   font-weight: 50;
+  margin-top: 80px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: #ffffff;
+  color: #000000;
   -webkit-text-stroke: 0.3vw #000000;
-  text-transform: uppercase;
+  text-transform: initial;
 }
 .header-text p::before{
   content: attr(data-text);
@@ -341,7 +341,7 @@ nav ul li a:hover::after{
   height: 100%;
 }
 
-.btn{
+.btn {
   display: block;
   margin: 50px auto;
   width: fit-content;
@@ -351,6 +351,8 @@ nav ul li a:hover::after{
   text-decoration: none;
   color: #fff;
   transition: background 0.5s;
+  box-shadow: 0 0 20px 0 #4657AF;
+  animation: spin 4s linear infinite;
 }
 
 .btn:hover{
@@ -400,7 +402,7 @@ nav ul li a:hover::after{
   color: #e1306c; /* Instagram color */
   transform: translateY(-5px);
 }
-[O
+
 .social-icon a:nth-child(4):hover { /* Targets the fourth child, which is the LinkedIn icon */
   color: #0077b5; /* LinkedIn color */
   transform: translateY(-5px);
@@ -413,13 +415,15 @@ nav ul li a:hover::after{
 
 .btn.btn2{
   display: inline-block;
-  background: #4657AF;
+  background: #000000;
 }
 
 .btn.btn.btn2:hover{
   color: #ffffff;
   transform: translateY(-5px);
 }
+
+
 .contact-right form{
   width: 100%;
 }
@@ -465,7 +469,7 @@ nav .fas {
 @media only screen and (max-width: 600px) {
   /* Set the background image for the header */
   #header {
-    background-image: url(./images/phone-background.png);
+    background-image: url(https://www.dropbox.com/s/lk9ccx2537vh3ei/phone-background.png?raw=1);
   }
 
   /* Adjust the font size and margin for the header text */
