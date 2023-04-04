@@ -12,11 +12,42 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://kit.fontawesome.com/b748c22ef4.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    
+      <!-- Email Json -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script type="text/javascript">
-    (function() {
-      emailjs.init("G4NPFbYZ6YZ_3aPtO");
+    (function () {
+      // https://dashboard.emailjs.com/admin/account
+      emailjs.init('G4NPFbYZ6YZ_3aPtO');
     })();
+  </script>
+  <script type="text/javascript">
+    window.onload = function () {
+      document.getElementById('contact-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+        const name = event.target.elements.name.value;
+        const email = event.target.elements.email.value;
+        const message = event.target.elements.message.value;
+        if (name === '' || email === '' || message ===''){
+          alert('Enter all fields');
+        }
+
+        console.log('I enter here');
+        emailjs.send('service_imc9jhr', 'template_taarc56', {
+          name: name,
+          email: email,
+          message: message
+        })
+          .then(function (response) {
+            alert('Email sent successfully');
+            location.reload();
+          }, function (error) {
+            alert('Failed to send email', error);
+            alert('The official is notified!');
+            location.reload();
+          });
+      });
+    }
   </script>
 </head>
 <body>
@@ -255,9 +286,9 @@
                 </div>
                 <div class="contact-right">
                     <form id="contact-form">
-                       <input type="text" name="name" placeholder="Your Name" required>
-                       <input type="text" name="email" placeholder="Your Email" required>
-                       <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                       <input type="text" name="name" id="name" placeholder="Your Name" required>
+                       <input type="text" name="email" id="email" placeholder="Your Email" required>
+                       <textarea name="message" id="message" rows="6" placeholder="Your Message"></textarea>
                        <button type="submit" class="btn2">Submit</button>
                     </form>
                     <span id="msg"></span>
@@ -304,28 +335,7 @@
             backSpeed: 60,
             loop: true
         });
-    </script>
-    <script type="text/javascript">
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-          event.preventDefault();
-      
-          // Get the contact form data
-          var formData = {
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            message: document.getElementById('message').value
-          };
-      
-          // Send the email
-          emailjs.send('service_imc9jhr', 'template_taarc56', formData)
-            .then(function(response) {
-              console.log('SUCCESS!', response.status, response.text);
-            }, function(error) {
-              console.log('FAILED...', error);
-            });
-        });
-      </script>
-      
+    </script>    
 </body>
 </div>
 </html>
